@@ -10,6 +10,10 @@ const SOURCE_DIR = 'src/';
 const BUILD_DIR = 'www';
 const CONFIG_FILENAME = 'webpack.config.js';
 
+gulp.task('clean', del.bind(
+    null, ['www/*', '!www/.keep', '!build/.git'], {dot: true}
+));
+
 gulp.task('deploy', function() {
 
     var assets = [
@@ -18,7 +22,6 @@ gulp.task('deploy', function() {
     ];
 
     return gulp.src(assets, { base: SOURCE_DIR })
-        //.pipe(glp.changed(SOURCE_DIR))
         .pipe(gulp.dest(BUILD_DIR));
 });
 
