@@ -16,6 +16,7 @@
   "devDependencies": {
     "babel-core": "^4.4.3",
     "babel-loader": "^4.0.0",
+    "css-loader": "^0.9.1",
     "del": "^1.1.1",
     "gulp": "^3.8.11",
     "gulp-changed": "^1.1.1",
@@ -26,6 +27,8 @@
     "gulp-webpack-build": "^0.5.1",
     "lodash": "^3.3.1",
     "minimist": "^1.1.0",
+    "sass-loader": "^0.4.0",
+    "style-loader": "^0.8.3",
     "webpack": "^1.6.0"
   },
   "dependencies": {
