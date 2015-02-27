@@ -32,7 +32,7 @@ var config = {
   ],
 
   resolve: {
-    extensions: ['', '.webpack.js', '.web.js', '.js', '.jsx']
+    extensions: ['', '.webpack.js', '.web.js', '.js', '.jsx', '.scss']
   },
 
   module: {
@@ -42,8 +42,8 @@ var config = {
         loader: 'style-loader!css-loader!'
       },
       {
-        test: /\.less$/,
-        loader: 'style-loader!css-loader!less-loader'
+        test: /\.scss$/,
+        loader: 'style-loader!css-loader!sass-loader'
       },
       {
         test: /\.gif/,
