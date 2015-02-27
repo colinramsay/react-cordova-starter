@@ -1,7 +1,7 @@
 {
-  "name": "Elklan",
+  "name": "ReactCordovaStarter",
   "version": "1.0.0",
-  "description": "Elklan STAP App",
+  "description": "ReactCordovaStarter",
   "main": "index.js",
   "private": true,
   "scripts": {
@@ -9,9 +9,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://git.gotripod.com/elklan/stap"
+    "url": "https://github.com/colinramsay/react-cordova-starter/"
   },
-  "author": "",
+  "author": "Colin Ramsay",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^4.4.3",
