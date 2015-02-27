@@ -28,8 +28,7 @@ gulp.task('deploy', function() {
 gulp.task('webpack', [], function() {
     return gulp.src(CONFIG_FILENAME)
         .pipe(webpack.compile())
-        .pipe(webpack.format({ version: true, timings: true }))
-        .pipe(webpack.failAfter({ errors: true, warnings: true }));
+        .pipe(webpack.format({ version: true, timings: true }));
 });
 
 
