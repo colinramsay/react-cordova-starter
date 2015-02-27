@@ -6,8 +6,6 @@ var _ = require('lodash'),
 
 var DEBUG = !argv.release;
 
-console.log('HIYA!');
-
 var GLOBALS = {
   'process.env.NODE_ENV': DEBUG ? '"development"' : '"production"',
   __DEV__: DEBUG
