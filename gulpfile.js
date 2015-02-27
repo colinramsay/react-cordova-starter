@@ -10,13 +10,23 @@ const SOURCE_DIR = 'src/';
 const BUILD_DIR = 'www';
 const CONFIG_FILENAME = 'webpack.config.js';
 
+gulp.task('deploy', function() {
+
+    var assets = [
+        'src/index.html',
+        'src/dist/bundle.js'
+    ];
+
+    return gulp.src(assets, { base: SOURCE_DIR })
+        //.pipe(glp.changed(SOURCE_DIR))
+        .pipe(gulp.dest(BUILD_DIR));
+});
 
 gulp.task('webpack', [], function() {
     return gulp.src(CONFIG_FILENAME)
         .pipe(webpack.compile())
         .pipe(webpack.format({ version: true, timings: true }))
-        .pipe(webpack.failAfter({ errors: true, warnings: true }))
-        .pipe(gulp.dest(BUILD_DIR));
+        .pipe(webpack.failAfter({ errors: true, warnings: true }));
 });
 
 
@@ -31,8 +41,7 @@ gulp.task('watch', function() {
                         .pipe(webpack.format({
                             verbose: true,
                             version: false
-                        }))
-                        .pipe(gulp.dest(BUILD_DIR));
+                        }));
                 }));
         }
     });
