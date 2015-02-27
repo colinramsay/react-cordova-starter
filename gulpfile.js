@@ -33,7 +33,7 @@ gulp.task('webpack', [], function() {
 
 
 gulp.task('watch', function() {
-    gulp.watch(path.join(SOURCE_DIR, 'js/**/*.*')).on('change', function(event) {
+    gulp.watch(path.join(SOURCE_DIR, '**/*.*')).on('change', function(event) {
         if (event.type === 'changed') {
             gulp.src(event.path, { base: path.resolve(SOURCE_DIR) })
                 .pipe(webpack.closest(CONFIG_FILENAME))
